@@ -1,0 +1,471 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #eef3f8;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.logo img {
+    width: 175px;
+    height: 115px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    background-color: #ffffff;
+
+    border-bottom: 3px solid #ff8a00;
+    border-top: 2px solid #0b2d5c;
+    border-left: 2px solid #0b2d5c;
+    border-right: 2px solid #0b2d5c;
+
+    border-radius: 10px;
+
+    background-image: url('images/nav-background.png');
+    background-size: cover;
+
+    box-shadow: 0 3px 10px rgba(11, 45, 92, 0.20);
+}
+
+.navigation .nav-links {
+    font-size: 20px;
+    display: flex;
+    gap: 35px;
+}
+
+.navigation .nav-links a {
+    text-decoration: none;
+    color: #0b2d5c;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navigation .nav-links a:hover {
+    color: #ff7a00;
+    text-decoration: underline;
+}
+
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40vh;
+
+    background-color: #dcecff;
+
+    gap: 120px;
+
+    background-image: url('images/welcome-background.png');
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 4px solid #0b2d5c;
+}
+
+.hero h1 {
+    font-size: 58px;
+    color: #09244a;
+
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.hero p {
+    font-size: 30px;
+    color: #304b68;
+}
+
+.hero a {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background: linear-gradient(135deg, #ff9800, #ff6d00);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    border: 2px solid #e56700;
+
+    font-weight: bold;
+
+    box-shadow: 0 4px 8px rgba(255, 109, 0, 0.30);
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.hero a:hover {
+    background: linear-gradient(135deg, #ff7a00, #e65100);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 12px rgba(255, 109, 0, 0.40);
+}
+
+
+/* ================= PRODUCTS ================= */
+
+.products {
+    padding: 20px 30px;
+
+    background-color: #eef3f8;
+}
+
+.products h2 {
+    text-align: center;
+
+    font-size: 36px;
+
+    margin-bottom: 30px;
+
+    color: #09244a;
+}
+
+.products .products-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ================= PRODUCT CARD ================= */
+
+.products .products-grid .product-card {
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid #c5d2df;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background-color: #ffffff;
+
+    position: relative;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+
+    box-shadow: 0 3px 8px rgba(11, 45, 92, 0.12);
+}
+
+.products .products-grid .product-card h3 {
+    font-size: 18px;
+
+    margin: 5px 0;
+
+    padding: 0 5px;
+
+    color: #0b2d5c;
+}
+
+.products .products-grid .product-card p {
+    font-size: 16px;
+
+    color: #ff6d00;
+
+    font-weight: bold;
+
+    padding: 0 5px;
+}
+
+
+/* ================= PRODUCT BADGE ================= */
+
+.products .products-grid .product-card .badge {
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    background-color: #ff6d00;
+
+    color: #ffffff;
+
+    padding: 5px 10px;
+
+    font-size: 12px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.20);
+}
+
+
+/* ================= CARD HOVER ================= */
+
+.products .products-grid .product-card:hover {
+    box-shadow: 0 8px 18px rgba(11, 45, 92, 0.20);
+
+    transform: translateY(-5px);
+
+    border-color: #ff9800;
+}
+
+
+/* ================= PRODUCT IMAGE ================= */
+
+.products .products-grid .product-card img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    background-color: #fafcff;
+}
+
+
+/* ================= STAR RATING ================= */
+
+.products .products-grid .product-card star-rating {
+    display: block;
+
+    margin: 5px 0;
+
+    font-size: 18px;
+
+    color: #ffb300;
+}
+
+
+/* ================= BUTTON GROUP ================= */
+
+.products .products-grid .product-card .button-group {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    margin: 5px 0 15px;
+}
+
+
+/* ================= PRODUCT BUTTONS ================= */
+
+.products .products-grid .product-card .button-group button {
+    width: 105px;
+
+    height: 45px;
+
+    margin: 0;
+
+    border: 1px solid #0b2d5c;
+
+    font-size: 13px;
+
+    padding: 10px;
+
+    background-color: #0b72e7;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: background-color 0.3s ease,
+                transform 0.2s ease,
+                box-shadow 0.3s ease;
+}
+
+.products .products-grid .product-card button:hover {
+    background-color: #ff7a00;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 3px 7px rgba(255, 122, 0, 0.30);
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 20px 30px;
+
+    background-color: #ffffff;
+
+    border-top: 3px solid #d7e2ee;
+    border-bottom: 3px solid #d7e2ee;
+}
+
+.about h2 {
+    text-align: center;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+
+    margin-top: 5px;
+
+    color: #09244a;
+}
+
+.about p {
+    font-size: 18px;
+
+    color: #4b6075;
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    padding: 20px 30px;
+
+    background-color: #eef3f8;
+}
+
+.contact h2 {
+    text-align: center;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+
+    color: #09244a;
+}
+
+.contact form {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.contact form label {
+    font-size: 16px;
+
+    color: #0b2d5c;
+
+    font-weight: bold;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+
+    padding: 10px;
+
+    font-size: 16px;
+
+    border: 2px solid #c8d5e3;
+
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #0b72e7;
+
+    box-shadow: 0 0 5px rgba(11, 114, 231, 0.25);
+}
+
+.contact form button {
+    padding: 10px 20px;
+
+    font-size: 16px;
+
+    background: linear-gradient(135deg, #0b72e7, #0754ad);
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+
+.contact form button:hover {
+    background: linear-gradient(135deg, #ff9800, #e65100);
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    text-align: center;
+
+    padding: 5px 0;
+
+    background-color: #09244a;
+
+    color: #ffffff;
+
+    border-top: 3px solid #ff8a00;
+}
